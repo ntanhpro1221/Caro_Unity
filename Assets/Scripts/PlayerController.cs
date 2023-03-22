@@ -201,8 +201,8 @@ public class PlayerController : NetworkBehaviour
             return;
         if (cam == null)
             ForLoadBoardScene();
-        // if (!IsOwner)
-        //     return;
+        if (!IsOwner)
+            return;
         if (Input.touches.Length > 0 && IsOverUI(Input.touches[0].position))
             return;
         switch (curStatus)
